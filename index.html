@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Degradado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f0f0f0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+            margin: 20px 20px 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        main {
+            padding: 40px 20px;
+            margin: 0 20px;
+            background: white;
+            min-height: 60vh;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 20px;
+            border-radius: 0 0 15px 15px;
+            margin: 0 20px 20px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .contenido {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="contenido">
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Bienvenido a nuestra página</h1>
+        <p>Este es el contenido principal de la página web.</p>
+    </main>
+
+    <footer>
+        <div class="contenido">
+            <p>© 2024 Mi Página Web. Todos los derechos reservados.</p>
+            <p>Contacto: info@midominio.com | Tel: 555-1234</p>
+        </div>
+    </footer>
+</body>
+</html>
