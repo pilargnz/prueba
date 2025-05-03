@@ -1,0 +1,1485 @@
+/* Títulos principales */
+h1, h2, h3 {
+  font-family: 'Bangers', cursive;
+  color: var(--pop-pink);
+  letter-spacing: 2px;
+}
+
+.contenido-popart h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 1rem auto 3rem;
+  text-shadow: 5px 5px 0 var(--pop-yellow);
+  background-color: var(--pop-white);
+  display: inline-block;
+  padding: 0 2rem;
+  border: 4px solid var(--pop-black);
+  box-shadow: 8px 8px 0 var(--pop-black);
+  transform: rotate(-2deg);
+}
+
+/* ===== TARJETAS DE ARTISTAS ===== */
+.artistas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.artista-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  background: var(--pop-white);
+  border: 6px solid var(--pop-black);
+  box-shadow: 10px 10px 0 var(--pop-blue);
+  min-height: 400px;
+  transition: all 0.3s ease;
+}
+
+.artista-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 0 var(--pop-pink);
+}
+
+.artista-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-right: 4px solid var(--pop-black);
+  filter: saturate(1.4) contrast(1.1);
+}
+
+.artista-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.artista-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.artista-card h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--pop-blue);
+}
+
+.artista-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 1rem;
+}
+
+/* ===== GALERÍA ===== */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.galeria-item {
+  background: var(--pop-white);
+  border: 5px solid var(--pop-black);
+  transition: all 0.3s ease;
+  aspect-ratio: 1/1;
+  box-shadow: 8px 8px 0 var(--pop-yellow);
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 5px solid var(--pop-black);
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+.formulario-contacto {
+  background: var(--pop-white);
+  padding: 2rem;
+  border: 5px solid var(--pop-black);
+  box-shadow: 10px 10px 0 var(--pop-pink);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  border: 3px solid var(--pop-black) !important;
+  margin-bottom: 1rem;
+}
+
+.formulario-contacto button {
+  background-color: var(--pop-yellow);
+  color: var(--pop-black);
+  border: none;
+  padding: 12px 25px;
+  font-family: 'Bangers', cursive;
+  font-size: 1.2rem;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 var(--pop-black);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--pop-black);
+  color: var(--pop-white);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 5px solid var(--pop-yellow);
+}
+
+footer a {
+  color: var(--pop-yellow);
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .artistas-grid, .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .artista-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .artista-card img {
+    height: 300px;
+    border-right: none;
+    border-bottom: 4px solid var(--pop-black);
+  }
+  
+  .contenido-popart h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenido-popart h1 {
+    font-size: 2.2rem;
+    transform: rotate(0);
+  }
+  
+  .menu-principal a {
+    font-size: 18px;
+    padding: 8px 10px;
+  }
+}
+
+
+/* Tipografías y colores base */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+h1, h2, h3 {
+  font-family: 'Bangers', cursive;
+  color: #FF003C;
+}
+
+/* Header fijo con estilo diferenciado */
+header {
+  background-color: #FFE600;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra suave para diferenciar el menú */
+}
+
+.logo {
+  height: 100px;
+}
+
+.menu-principal ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-principal a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 25px; /* AUMENTAMOS el tamaño de fuente */
+  padding: 10px 15px; /* ESPACIO INTERIOR para que se vean como botones */
+  border-radius: 8px; /* Bordes suaves estilo pop art */
+  transition: all 0.3s ease;
+}
+
+.menu-principal a:hover {
+  color: #0096FF;
+}
+
+.con-textura {
+  background-image: radial-gradient(#9f8926 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #FFE600; /* Fondo vibrante del Pop Art */
+}
+
+.intro img {
+  width: 100%;
+  max-width: 800px; /* Para que no se pase en pantallas grandes */
+  height: auto;
+  border: 10px solid #000;
+  box-shadow: 8px 8px 0 #FF003C; /* Sombra estilo cómic */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.intro img:hover {
+  transform: scale(1.02);
+}
+
+.intro img {
+  max-width: 45%;
+}
+
+
+.intro {
+  flex-direction: row;
+  text-align: left;
+  justify-content: center;
+  background-image: radial-gradient(#ff003c 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+
+
+.texto-intro {
+  max-width: 45%;
+  background-color: transparent; /* ya no hace falta poner fondo aquí */
+  padding: 20px;
+}
+
+.texto-intro p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  line-height: 2;
+}
+
+
+
+
+footer {
+  background-color: #000;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #FFE600;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+
+
+.bloque {
+  margin-bottom: 2.5rem;
+}
+
+.bloque h2 {
+  font-family: 'Bangers', cursive;
+  color: #FF003C;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.bloque p,
+.bloque ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.bloque ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.generos-popart {
+  background-color: #0096FF;
+  color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.generos-popart h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.generos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.genero {
+  background-color: #FF003C;
+  padding: 1rem;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+
+
+/* Título estilo cartel de cómic */
+.contenido-popart h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
+  color: #FF003C;
+  text-align: center;
+  margin: 1rem 0 3rem;
+  text-shadow: 
+    5px 5px 0 #FFE600,
+    -2px -2px 0 #000;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.contenido-popart h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
+  color: #FF003C;
+  text-align: center;
+  margin: 2rem 0;
+  text-shadow: 5px 5px 0 #FFE600;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo Pop Art con puntos Ben-Day */
+.contenido-popart {
+  background-color: #fff;
+  background-image: 
+    /* Patrón de puntos Ben-Day */
+    radial-gradient(circle at 10px 10px, #FF003C 1px, transparent 2px),
+    radial-gradient(circle at 30px 30px, #0096FF 1px, transparent 2px),
+    radial-gradient(circle at 50px 50px, #FFE600 1px, transparent 2px);
+  padding: 4rem 0;;
+  position: relative;
+  overflow: hidden;
+}
+
+
+ESTILOS ESPECÍFICOS PARA CONTENIDO-POPART */
+    .contenido-popart {
+      position: relative;
+      padding: 4rem 0;
+      overflow: hidden;
+    }
+
+    .contenido-popart::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      background-image: 
+        radial-gradient(circle at 10px 10px, #FF003C 1px, transparent 2px),
+        radial-gradient(circle at 30px 30px, #0096FF 1px, transparent 2px),
+        radial-gradient(circle at 50px 50px, #FFE600 1px, transparent 2px);
+      background-size: 60px 60px;
+      z-index: -1;
+    }
+
+    .contenido-popart .contenedor-interno {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contenido-popart .bloque {
+      margin-bottom: 2.5rem;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 1.5rem;
+      border: 3px solid #000;
+      box-shadow: 5px 5px 0 #0096FF;
+    }
+
+    .contenido-popart h2 {
+      font-family: 'Bangers', cursive;
+      color: #FF003C;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contenido-popart p,
+    .contenido-popart ul {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .contenido-popart ul {
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+ 
+/* Contenedor de artistas */
+
+/* Fondo exclusivo para artistas.html */
+.background-artistas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-image: 
+    radial-gradient(circle at 10px 10px, #FF003C 1px, transparent 2px),
+    radial-gradient(circle at 30px 30px, #0096FF 1px, transparent 2px),
+    radial-gradient(circle at 50px 50px, #FFE600 1px, transparent 2px);
+  background-size: 60px 60px;
+  z-index: -1; /* Para que quede detrás del contenido */
+}
+
+.artistas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tarjeta de artista */
+.artista-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  background: white;
+  border: 6px solid #000;
+  box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  min-height: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artista-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 20px 20px 0 #FF003C;
+}
+
+/* Imagen con marco Pop */
+.artista-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-right: 4px solid #000;
+  filter: saturate(1.4) contrast(1.1);
+}
+
+/* Contenido textual */
+.artista-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 400px;
+  background-color: white; /* Fondo blanco para mejor legibilidad */
+}
+
+/* Nombre del artista */
+.artista-card h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 2.5rem;
+  color: #FF003C;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Subrayado decorativo */
+.artista-card h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #0096FF;
+}
+
+/* Texto biográfico */
+.artista-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 1rem;
+}
+
+/* Efecto de puntos Ben-Day en tarjetas (más sutil) */
+.artista-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#000 5%, transparent 5%);
+  background-size: 20px 20px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .artistas-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .artista-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .artista-card img {
+    height: 300px;
+    border-right: none;
+    border-bottom: 4px solid #000;
+  }
+  
+  .contenido-popart h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenido-popart h1 {
+    font-size: 2.5rem;
+    padding: 0 1rem;
+  }
+  
+  .artista-card h2 {
+    font-size: 2rem;
+  }
+  
+  .artista-content {
+    padding: 1.5rem;
+  }
+  
+  /* Ajuste del fondo para móviles */
+  .contenido-popart {
+    background-size: 40px 40px;
+  }
+}
+
+/* ===== OBRAS POP ART - FONDO MEJORADO ===== */
+.obras-popart {
+  background-color: #fff;
+  background-image: 
+    /* Patrón de puntos Ben-Day */
+    radial-gradient(circle at 10px 10px, #FF003C 1px, transparent 2px),
+    radial-gradient(circle at 30px 30px, #0096FF 1px, transparent 2px),
+    radial-gradient(circle at 50px 50px, #FFE600 1px, transparent 2px);
+  background-size: 60px 60px;
+  padding-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de borde rasgado */
+.obras-popart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #000,
+    #000 10px,
+    #FF003C 10px,
+    #FF003C 20px
+  );
+}
+
+.obras-popart h1 {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  font-size: 4rem; /* Más grande */
+  color: #FF003C;
+  margin: 2rem 0;
+  letter-spacing: 3px;
+  text-shadow: 
+    3px 3px 0 #FFE600,
+    -1px -1px 0 #000;
+  position: relative;
+  z-index: 10;
+}
+
+/* Items con mejor contraste */
+.obra-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  border: 5px solid #000;
+  border-radius: 0; /* Esquinas cuadradas estilo Pop */
+  box-shadow: 
+    10px 10px 0 #000,
+    -5px -5px 0 #0096FF;
+  position: relative;
+  background-color: white; /* Fondo sólido para contenido */
+  z-index: 5;
+}
+
+/* Efecto de puntos en items */
+.obra-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#000 8%, transparent 8%);
+  background-size: 12px 12px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.obra-item img {
+  width: 100%;
+  border: 4px solid #000;
+  border-radius: 0; /* Estilo plano */
+  filter: saturate(1.4) contrast(1.1);
+  transition: transform 0.3s ease;
+}
+
+.obra-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Texto con mejor jerarquía */
+.obra-item h2 {
+  font-family: 'Bangers', cursive;
+  color: #FF003C;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.obra-item h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #0096FF;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.obra-item p {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: rgba(255,255,255,0.7);
+  padding: 1rem;
+}
+
+/* Colores alternos mejorados */
+.color1 { 
+  background-color: #FFE600; 
+  box-shadow: 10px 10px 0 #FF003C;
+}
+.color2 { 
+  background-color: #FF003C; 
+  box-shadow: 10px 10px 0 #000;
+}
+.color2 h2 { color: #FFE600 !important; }
+.color3 { 
+  background-color: #0096FF; 
+  box-shadow: 10px 10px 0 #FFE600;
+}
+
+/* Diseño zigzag - Manteniendo tu estructura */
+@media (min-width: 768px) {
+  .obra-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .obra-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .obra-item img {
+    width: 50%;
+  }
+
+  .obra-item div {
+    width: 50%;
+    padding: 1rem;
+  }
+}
+
+/* Efecto de explosión en hover */
+.obra-item:hover::before {
+  content: "POP!";
+  position: absolute;
+  font-family: 'Bangers', cursive;
+  color: #FF003C;
+  font-size: 3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  opacity: 0.3;
+  z-index: 10;
+}
+
+
+/* ===== GALERÍA POP ART - VERSIÓN CORREGIDA ===== */
+.galeria-main {
+  padding: 4rem 1rem;
+  background-color: #fff;
+  background-image: 
+    radial-gradient(#FFE600 1px, transparent 2px),
+    radial-gradient(#0096FF 1px, transparent 2px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border: 8px solid #000;
+  position: relative;
+  min-height: calc(100vh - 200px); /* Previene superposición con footer */
+}
+
+/* TÍTULO DESTACADO */
+.titulo-galeria {
+  font-family: 'Bangers', cursive;
+  font-size: 4.5rem;
+  color: #FF003C;
+  margin: 1.5rem auto; /* Centrado horizontal */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: #FFE600;
+  border: 5px solid #000;
+  box-shadow: 
+    10px 10px 0 #000,
+    -5px -5px 0 #0096FF;
+  transform: rotate(-2deg);
+  z-index: 20;
+  max-width: 90%; /* Evita desbordamiento en móviles */
+}
+
+/* Grid de obras CORREGIDO */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Columnas iguales */
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 2rem auto;
+  justify-items: center; /* Centra horizontalmente */
+}
+
+.galeria-item {
+  background: white;
+  border: 5px solid #000;
+  padding: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  aspect-ratio: 1/1;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%; /* Ocupa todo el espacio disponible */
+  max-width: 350px; /* Máximo ancho por item */
+}
+
+/* Ajuste de imágenes */
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Centra la imagen */
+  border-bottom: 5px solid #000;
+  display: block; /* Elimina espacio fantasma */
+}
+
+/* Footer ajustado */
+footer {
+  clear: both; /* Limpia floats */
+  position: relative;
+  margin-top: 3rem; /* Espacio seguro */
+  padding: 2rem;
+  background: #000;
+  color: white;
+  text-align: center;
+}
+
+/* Responsive mejorado */
+@media (max-width: 1000px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    padding: 2rem 1rem; /* Márgenes laterales reducidos */
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-grid {
+    grid-template-columns: minmax(250px, 1fr);
+    padding: 2rem 0.5rem;
+  }
+  
+  .titulo-galeria {
+    font-size: 2.8rem;
+    transform: rotate(0);
+    padding: 0.5rem 1rem;
+  }
+  
+  .galeria-item {
+    max-width: 300px;
+  }
+}
+
+/* RECURSOS */
+
+/* Asegura que el header mantenga su tipografía */
+.menu-principal ul li a {
+  font-family: 'Bangers', cursive !important;
+  letter-spacing: 3px;
+}
+
+/* Opcional: si prefieres otra tipografía para el header, especifícala */
+header {
+  font-family: 'Poppins', sans-serif !important; /* O la que prefieras */
+}
+
+.background-recursos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-image: 
+    radial-gradient(circle at 10px 10px, #FF003C 1px, transparent 2px),
+    radial-gradient(circle at 30px 30px, #0096FF 1px, transparent 2px),
+    radial-gradient(circle at 50px 50px, #FFE600 1px, transparent 2px);
+  background-size: 60px 60px;
+  z-index: -2;
+  opacity: 0.85;
+}
+
+.recursos-main {
+  padding: 100px 20px 60px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.titulo-recursos {
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
+  color: #FF003C;
+  text-align: center;
+  margin: 0 auto 3rem;
+  text-shadow: 
+    5px 5px 0 #FFE600,
+    -2px -2px 0 #000;
+  letter-spacing: 3px;
+  position: relative;
+  background-color: white;
+  display: inline-block;
+  padding: 0 2rem;
+  border: 5px solid #000;
+  box-shadow: 10px 10px 0 #000;
+  transform: rotate(-1deg);
+}
+
+/* -------------------------------------------------- */
+/* SECCIONES DE CONTENIDO */
+/* -------------------------------------------------- */
+.recursos-section {
+  margin-bottom: 4rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 4px solid #000;
+  padding: 2rem;
+  border-radius: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 
+    8px 8px 0 #FF003C,
+    -4px -4px 0 #0096FF;
+  position: relative;
+  overflow: hidden;
+}
+
+.recursos-main section {
+  margin-bottom: 3rem;
+  background-color: #ffe600dd;
+  border-left: 8px solid #0096FF;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.recursos-main h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.recursos-main ul {
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Efecto de puntos Ben-Day sutil */
+.recursos-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#000 5%, transparent 5%);
+  background-size: 20px 20px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Títulos de sección */
+.recursos-section h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 2.5rem;
+  color: #FF003C;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.recursos-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #0096FF;
+}
+
+/* Listas de recursos */
+.recursos-lista {
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.recursos-lista li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.recursos-lista li::before {
+  content: "•";
+  color: #FF003C;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* Enlaces */
+.recursos-lista a {
+  color: #0096FF;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px dotted #0096FF;
+  transition: all 0.3s ease;
+}
+
+.recursos-lista a:hover {
+  color: #FF003C;
+  border-bottom: 2px solid #FF003C;
+}
+
+/* Bloques de texto */
+.texto-recursos {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* -------------------------------------------------- */
+/* TARJETAS DE RECURSOS */
+/* -------------------------------------------------- */
+.recurso-card {
+  background: white;
+  border: 4px solid #000;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 6px 6px 0 #FFE600;
+  transition: all 0.3s ease;
+}
+
+.recurso-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 #FF003C;
+}
+
+.recurso-card h3 {
+  font-family: 'Bangers', cursive;
+  color: #0096FF;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------------------------------------------- */
+/* RESPONSIVE DESIGN */
+/* -------------------------------------------------- */
+@media (max-width: 900px) {
+  .titulo-recursos {
+    font-size: 3rem;
+    transform: rotate(0);
+    margin-bottom: 2rem;
+  }
+  
+  .recursos-section {
+    padding: 1.5rem;
+  }
+  
+  .recursos-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .titulo-recursos {
+    font-size: 2.2rem;
+    padding: 0 1rem;
+  }
+  
+  .recursos-main {
+    padding: 80px 15px 40px;
+  }
+  
+  .recursos-lista li {
+    font-size: 1rem;
+  }
+}
+
+/* -------------------------------------------------- */
+/* EFECTOS ESPECIALES POP ART */
+/* -------------------------------------------------- */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.recurso-card:hover {
+  animation: pop 0.4s ease;
+}
+
+/* ESTILOS PARA LOS LINKS DE MUSEOS */
+
+.enlace-museo {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.enlace-museo:hover {
+  color: #FFE600;
+}
+
+.enlace-museo::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.enlace-museo:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.boton-pop {
+  display: inline-block;
+  background: #FF003C;
+  color: white;
+  padding: 8px 15px;
+  border: 2px solid #000;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-top: 10px;
+  box-shadow: 4px 4px 0 #000;
+  transition: all 0.3s ease;
+}
+
+.boton-pop:hover {
+  background: #FFE600;
+  color: #000;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+/* Estilos específicos para tarjetas de museo */
+.tarjeta-museo {
+  background: rgba(255,255,255,0.9);
+  border: 3px solid #000;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.tarjeta-museo h3 {
+  color: #FF003C;
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Efecto hover para tarjetas */
+.tarjeta-museo:hover {
+  background: white;
+  box-shadow: 6px 6px 0 #FF003C;
+}
+
+/* ESTILOS OPTIMIZADOS CON IMAGEN INTEGRADA */
+
+/* Estructura flexible */
+.contenedor-flex {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.columna-texto {
+  flex: 1;
+}
+
+.columna-imagen {
+  flex: 1;
+  position: sticky;
+  top: 120px;
+}
+
+/* Imagen estilizada */
+.imagen-estilizada {
+  width: 100%;
+  max-width: 100%;
+  border: 5px solid #000;
+  box-shadow: 15px 15px 0 #FFE600;
+  transition: all 0.3s ease;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.imagen-estilizada:hover {
+  transform: rotate(2deg) scale(1.03);
+  box-shadow: 15px 15px 0 #FF003C;
+}
+
+
+/* Footer completo */
+.footer-completo {
+  background-color: #000;
+  color: white;
+  padding: 30px 0;
+  margin-top: 60px;
+  width: 100%;
+  border-top: 5px solid #FFE600;
+}
+
+.contenido-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contenedor-flex {
+    flex-direction: column;
+  }
+  
+  .columna-imagen {
+    position: static;
+    order: -1;
+    margin-bottom: 30px;
+  }
+  
+  .imagen-estilizada {
+    max-height: 300px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .imagen-estilizada {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .leyenda-imagen {
+    font-size: 1rem;
+  }
+}
+
+/* Añade/modifica estos estilos */
+.contenedor-flex {
+  display: flex;
+  gap: 30px;
+  margin: 0 auto 40px; /* Centrado */
+  max-width: 900px; /* Mismo ancho que tendrá la sección museos */
+}
+
+.bloque-rosa {
+  max-width: 900px; /* Mismo ancho que contenedor-flex */
+  width: 100%;
+  margin: 0 auto; /* Centrado */
+  padding: 20px; /* Mantiene el padding interno */
+}
+
+/* Opcional: si necesitas que el fondo se extienda al 100% pero el contenido centrado */
+.seccion-museos {
+  width: 100%;
+}
+
+.contenido-museos {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+
+/* --- ESTILOS GENERALES DE CONTACTO --- */
+background-contacto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-image: 
+    radial-gradient(circle at 10px 10px, #FF003C 1px, transparent 2px),
+    radial-gradient(circle at 30px 30px, #0096FF 1px, transparent 2px),
+    radial-gradient(circle at 50px 50px, #FFE600 1px, transparent 2px);
+  background-size: 60px 60px;
+  z-index: -1; /* Para que quede detrás del contenido */
+}
+
+
+.contacto-main {
+  padding: 120px 20px 40px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.contacto-main h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 4rem; /* Más grande */
+    color: #FF003C;
+    margin: 2rem 0;
+    letter-spacing: 3px;
+    text-shadow: 
+      3px 3px 0 #FFE600,
+      -1px -1px 0 #000;
+    position: relative;
+    z-index: 10;
+  }
+
+
+
+.contacto-main p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+/* CONTENEDOR FORMULARIO + IMAGEN */
+.contacto-contenedor {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* FORMULARIO MEJORADO */
+.formulario-contacto {
+  flex: 1 1 50%;
+  min-width: 400px;
+  padding: 40px 30px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 150, 255, 0.1);
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+.formulario-contacto::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 3px solid #FFE600;
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #FFE600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #0096FF !important;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.formulario-contacto button {
+  background-color: #FFE600;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #FFDD00;
+}
+
+/* IMAGEN */
+.imagen-contacto {
+  flex: 1 1 50%;
+  max-width: 600px;
+  height: auto;
+  min-height: 400px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  border: 3px solid #FFE600;
+  box-shadow: 8px 8px 0 #0096FF;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contacto-contenedor {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .imagen-contacto {
+    order: -1;
+    max-height: 300px;
+    min-height: 250px;
+    max-width: 100%;
+  }
+  
+  .formulario-contacto {
+    min-width: unset;
+    width: 100%;
+  }
+}

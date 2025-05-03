@@ -1,88 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con Degradado</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            background: #f0f0f0;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            padding: 20px;
-            border-radius: 15px 15px 0 0;
-            margin: 20px 20px 0 20px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        main {
-            padding: 40px 20px;
-            margin: 0 20px;
-            background: white;
-            min-height: 60vh;
-        }
-
-        footer {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            padding: 20px;
-            border-radius: 0 0 15px 15px;
-            margin: 0 20px 20px 20px;
-            color: white;
-            text-align: center;
-        }
-
-        .contenido {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Qué es el Pop Art?</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="contenido">
-            <a href="#inicio">Inicio</a>
-            <a href="#menu">Menú</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
 
-    <main class="contenido">
-        <h1>Bienvenido a nuestra página</h1>
-        <p>Este es el contenido principal de la página web.</p>
-    </main>
+  <header class="menu-fijo con-textura">
+    <img src="imagenes/logopopart.png" alt="Logo Pop Art" class="logo">
+    <nav class="menu-principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="obras.html">Obras</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <footer>
-        <div class="contenido">
-            <p>© 2024 Mi Página Web. Todos los derechos reservados.</p>
-            <p>Contacto: info@midominio.com | Tel: 555-1234</p>
+  <main>
+    <!-- INTRODUCCIÓN -->
+    <section class="intro">
+      <img src="imagenes/intro-popart.png" alt="Ilustración colorida representando el Pop Art" class="imagen-intro"/>
+      <div class="texto-intro">
+        <p><strong>El Pop Art</strong> es un movimiento artístico que surgió en los años 50 en Inglaterra y alcanzó su auge en los 60 en Estados Unidos. Se caracteriza por el uso de imágenes populares y comerciales como la publicidad, el cómic, y los objetos cotidianos.</p>
+      </div>
+    </section>
+
+    <!-- ORIGEN, DESARROLLO Y CARACTERÍSTICAS -->
+    <section class="contenido-popart">
+      <div class="contenedor-interno">
+        <div class="bloque">
+          <h2>Origen del Pop Art</h2>
+          <p>El Pop Art nació en el Reino Unido en los años 50 como una respuesta a la cultura de masas, pero alcanzó su mayor desarrollo y popularidad en Estados Unidos durante los años 60. Este movimiento transformó elementos cotidianos en obras artísticas impactantes.</p>
         </div>
-    </footer>
+      
+        <div class="bloque">
+          <h2>Desarrollo</h2>
+          <p>El movimiento creció rápidamente gracias a artistas como Andy Warhol, Roy Lichtenstein y Richard Hamilton, quienes incorporaron imágenes de la publicidad, los cómics y la cultura del consumo a sus obras. El Pop Art rompió con la tradición del arte elitista al acercarlo al público general.</p>
+        </div>
+      
+        <div class="bloque">
+          <h2>Características</h2>
+          <ul>
+            <li>Colores vibrantes y llamativos</li>
+            <li>Inspiración en la cultura popular y los medios</li>
+            <li>Uso de técnicas como el collage y la serigrafía</li>
+            <li>Estética plana, gráfica y accesible</li>
+            <li>Repetición de imágenes y productos de consumo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GÉNEROS DESTACADOS -->
+    <section class="generos-popart">
+      <h2>Géneros destacados del Pop Art</h2>
+      <div class="generos-grid">
+        <div class="genero">🎨 Pintura</div>
+        <div class="genero">🖼️ Escultura</div>
+        <div class="genero">🖌️ Gráfica y serigrafía</div>
+        <div class="genero">📢 Diseño publicitario</div>
+        <div class="genero">🧩 Collage</div>
+        <div class="genero">📺 Arte multimedia</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pop Art Web - Todos los derechos reservados</p>
+    <p>
+      <a href="https://instagram.com" target="_blank">Instagram</a> |
+      <a href="https://tiktok.com" target="_blank">TikTok</a>
+    </p>
+  </footer>
+
+  
 </body>
 </html>
